@@ -12,18 +12,21 @@ public class Main {
 
     public static class DrawPolygons extends Component {
 
-
+        private ArrayList<Polygon> polygons = new ArrayList<Polygon>();
 
         class Polygon{
             private String name;
             private Point point;
 
-            public  Polygon(String name,Point point){
+            public  Polygon(String name,Point point){ //konstruktor
                 if(name==null || point == null){
                     return;
                 }
                 this.name= name;
                 this.point= point;
+            }
+            public void paint (){
+
             }
             public String getName() {
 
@@ -33,7 +36,7 @@ public class Main {
                 return this.point;
             }
         }
-        private ArrayList<Polygon> polygons = new ArrayList<Polygon>();
+
 
         public DrawPolygons(){
             int i =0;
@@ -48,6 +51,7 @@ public class Main {
             for (int i = 0; i < polygons.size(); i++) {
                 String currentPolygon = polygons.get(i).getName();
                 Point currentCenter = polygons.get(i).getPoint();
+
                 if (currentPolygon.equals("square"))
                     g.drawRect(currentCenter.x -10, currentCenter.y -10, 20, 20);
                 else if (currentPolygon.equals("triangle")) {
