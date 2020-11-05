@@ -40,11 +40,7 @@ public class Main {
             //Lägg till möjligheten att klicka ut nya polygoner•Hur bör denna förändring implementeras?
             polygons.add(new Polygon("triangle", new Point(100,150)));
             polygons.add(new Polygon("square", new Point(150,200)));
-            for(i=0;i<=40;i++){
-                polygons.add(new Polygon("rectangle", new Point(150+i,200+i)));
-                polygons.add(new Polygon("triangle", new Point(100+i,150+i)));
 
-            }
         }//constructor
 
         @Override
